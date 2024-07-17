@@ -5,7 +5,7 @@ import { MdWidgets } from 'react-icons/md';
 import { RiTodoFill } from 'react-icons/ri';
 import { SiGooglemaps } from 'react-icons/si';
 
-const Dashboard = () => {
+const Dashboard = ({ toggleDashboard }) => {
     const [selected, setSelected] = useState('Overview');
 
     const menuItems = [
@@ -32,18 +32,19 @@ const Dashboard = () => {
     ];
 
     return (
-        <div className="w-[15%] bg-gray-800 text-white relative">
+        <div className="h-full">
             <div className="flex items-center p-2 bg-gradient-to-r from-pink-500 to-purple-600 justify-center">
                 <div className="flex-shrink-0 bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2">
                     D
                 </div>
                 <h1 className="text-base">Dashboard</h1>
+                <button onClick={toggleDashboard} className="md:hidden ml-auto text-white">X</button>
             </div>
-            <ul className='text-[13px] py-3 px-6 relative'>
+            <ul className='text-[13px] text-gray-300 py-3 px-6'>
                 {menuItems.map(item => (
                     <li key={item.name} className="mb-3 flex items-center cursor-pointer" onClick={() => setSelected(item.name)}>
                         <span className={`mr-2 ${selected === item.name ? 'text-green-400' : ''}`}>{item.icon}</span>
-                        <a href="#" className={`hover:text-gray-400 ${selected === item.name ? 'text-green-400' : ''}`}>{item.name}</a>
+                        <a href="#" className={`${selected === item.name ? 'text-green-400' : ''}`}>{item.name}</a>
                         {selected === item.name && <div className="absolute left-0 w-[2px] rounded bg-yellow-400 h-6"></div>}
                     </li>
                 ))}
