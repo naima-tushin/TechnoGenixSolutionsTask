@@ -33,7 +33,7 @@ const Dashboard = ({ toggleDashboard }) => {
 
     return (
         <div className="h-full">
-            <div className="flex items-center p-2 bg-gradient-to-r from-pink-500 to-purple-600 justify-center">
+            <div className="flex items-center p-[11px] bg-gradient-to-r from-pink-500 to-purple-600 justify-center">
                 <div className="flex-shrink-0 bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2">
                     D
                 </div>

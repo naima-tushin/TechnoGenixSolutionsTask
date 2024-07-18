@@ -6,7 +6,7 @@ import { IoMdNotifications } from 'react-icons/io';
 
 const Navbar = ({ toggleDashboard }) => {
     return (
-        <nav className="bg-gray-800 p-[11px] shadow-md mb-4">
+        <nav className="bg-gray-800 p-[13px] shadow-md mb-4">
             <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-6">
                     <AiOutlineMenu className="text-gray-300 text-xl cursor-pointer" onClick={toggleDashboard} />
