@@ -2,6 +2,7 @@ import React from 'react';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Navbar from './Components/Navbar/Navbar';
 import Chart from './Components/Chart/Chart';
+import Analytics from './Components/Analytics/Analytics';
 
 function App() {
   const [isDashboardOpen, setIsDashboardOpen] = React.useState(false);
@@ -18,6 +19,7 @@ function App() {
       <div className="w-full md:w-5/6 lg:w-11/12 flex flex-col bg-slate-950">
         <Navbar toggleDashboard={toggleDashboard} />
         <Chart></Chart>
+        <Analytics></Analytics>
       </div>
     </div>
   );

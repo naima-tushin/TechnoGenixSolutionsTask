@@ -45,7 +45,7 @@ const Chart = () => {
                 data: [0, 7, 20, 5, 20, 10, 35],
                 borderColor: 'rgba(166,24,120,1)',
                 borderWidth: 3,
-                backgroundColor: 'rgba(116,76,157,0.3)', 
+                backgroundColor: 'rgba(116,76,157,0.3)',
                 fill: true,
                 tension: 0.3,
             },
@@ -88,8 +88,8 @@ const Chart = () => {
                 data: [55, 33, 12],
                 backgroundColor: ['#FF0000', '#744c9d', '#3333FF'],
                 hoverBackgroundColor: ['#FF3333', '#800080', '#0000FF'],
-                borderWidth: 40, 
-                borderColor: '#00000000', 
+                borderWidth: 40,
+                borderColor: '#00000000',
             },
         ],
     };
@@ -120,7 +120,7 @@ const Chart = () => {
     }, [lineData]);
 
     return (
-        <div className="lg:flex py-2 lg:py-6 px-4 lg:px-8 h-[75%]">
+        <div className="lg:flex py-2 lg:py-6 px-4 lg:px-8">
             <div className="flex flex-col lg:w-[70%] lg:mr-4">
                 <div className="border-2 border-black p-4 text-center h-[80%] bg-gray-800 rounded-lg">
                     <div className="lg:flex md:flex gap-2">
@@ -143,7 +143,7 @@ const Chart = () => {
                         </div>
                         <div className="w-[70%]">
                             <div className="lg:flex justify-between lg:p-4">
-                                <div className="flex gap-2 lg:gap-4 lg:tracking-wide text-gray-400 text-base uppercase mb-3 lg:mb-0">
+                                <div className="flex gap-2 lg:gap-4 lg:tracking-wide text-gray-400 text-base uppercase mb-3 lg:mb-0 mt-0 md:mt-5 lg:mt-0">
                                     <h1>Daily</h1>
                                     <h1>Weekly</h1>
                                     <h1 className='underline text-teal-600'>Monthly</h1>
@@ -160,7 +160,7 @@ const Chart = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='w-[260px] lg:w-auto md:w-[300px]'>
+                            <div className='w-[260px] lg:w-auto md:w-[300px] mt-0 md:mt-10 lg:mt-0'>
                                 <Line ref={chartRef} data={lineData} options={lineOptions} />
                             </div>
                         </div>
@@ -208,48 +208,48 @@ const Chart = () => {
                 </div>
             </div>
             <div className="relative border-2 border-black py-8 px-4 md:px-8 lg:px-3 text-center bg-gray-800 rounded-lg lg:w-[30%]">
-        <h1 className="text-start text-gray-300 md:text-2xl">Traffic</h1>
-        <div className="flex justify-center">
-            <div className="relative">
-                <Doughnut data={doughnutData} options={doughnutOptions} />
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="flex items-center justify-center w-28 h-28 bg-gray-600 rounded-full">
-                        <SlGraduation className="text-white text-4xl" />
+                <h1 className="text-start text-gray-300 md:text-2xl">Traffic</h1>
+                <div className="flex justify-center">
+                    <div className="relative">
+                        <Doughnut data={doughnutData} options={doughnutOptions} />
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <div className="flex items-center justify-center w-28 h-28 bg-gray-600 rounded-full">
+                                <SlGraduation className="text-white text-4xl" />
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div className="lg:flex md:flex md:px-8 lg:px-1 justify-between text-start mt-4">
-    <div className="flex items-center">
-        <div className='mb-8 lg:mb-0'>
-            <h1 className="text-gray-200 text-2xl font-bold mb-2">33%</h1>
-            <div className='flex justify-center items-center'>
-            <div className="w-3 h-3 rounded-full bg-purple-500 mr-2"></div>
-            <h2 className="text-gray-400 text-base">Facebook</h2>
-            </div>
-        </div>
-    </div>
-    <div className="flex items-center">
-        <div className='mb-8 lg:mb-0'>
-            <h1 className="text-gray-200 text-2xl font-bold mb-2">55%</h1>
-            <div className='flex justify-center items-center'>
-            <div className="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-            <h2 className="text-gray-400 text-base">YouTube</h2>
-            </div>
-        </div>
-    </div>
-    <div className="flex items-center">
-        <div className='mb-4 lg:mb-0'>
-            <h1 className="text-gray-200 text-2xl font-bold mb-2">12%</h1>
-            <div className='flex justify-center items-center'>
-            <div className="w-3 h-3 rounded-full bg-blue-500 mr-2"></div>
-            <h2 className="text-gray-400 text-base">Direct Search</h2>
-            </div>
-        </div>
-    </div>
-</div>
+                <div className="lg:flex md:flex md:px-8 lg:px-1 justify-between text-start mt-4">
+                    <div className="flex items-center">
+                        <div className='mb-8 lg:mb-0'>
+                            <h1 className="text-gray-200 text-2xl font-bold mb-2">33%</h1>
+                            <div className='flex justify-center items-center'>
+                                <div className="w-3 h-3 rounded-full bg-purple-500 mr-2"></div>
+                                <h2 className="text-gray-400 text-base">Facebook</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex items-center">
+                        <div className='mb-8 lg:mb-0'>
+                            <h1 className="text-gray-200 text-2xl font-bold mb-2">55%</h1>
+                            <div className='flex justify-center items-center'>
+                                <div className="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                                <h2 className="text-gray-400 text-base">YouTube</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex items-center">
+                        <div className='mb-4 lg:mb-0'>
+                            <h1 className="text-gray-200 text-2xl font-bold mb-2">12%</h1>
+                            <div className='flex justify-center items-center'>
+                                <div className="w-3 h-3 rounded-full bg-blue-500 mr-2"></div>
+                                <h2 className="text-gray-400 text-base">Direct Search</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    </div>
+            </div>
         </div>
     );
 };
