@@ -40,7 +40,7 @@ const Dashboard = ({ toggleDashboard }) => {
                 <h1 className="text-base text-white font-semibold">Dashboard</h1>
                 <button onClick={toggleDashboard} className="md:hidden ml-auto text-white">X</button>
             </div>
-            <ul className='text-base text-gray-300 py-11 px-6'>
+            <ul className='text-base text-gray-300 lg:py-11 px-6'>
                 {menuItems.map(item => (
                     <li key={item.name} className="mb-6 flex items-center cursor-pointer" onClick={() => setSelected(item.name)}>
                         <span className={`mr-2 ${selected === item.name ? 'text-green-400' : ''}`}>{item.icon}</span>

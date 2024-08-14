@@ -3,6 +3,7 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import Navbar from './Components/Navbar/Navbar';
 import Chart from './Components/Chart/Chart';
 import Analytics from './Components/Analytics/Analytics';
+import ActivityStatus from './Components/ActivityStatus/ActivityStatus';
 
 function App() {
   const [isDashboardOpen, setIsDashboardOpen] = React.useState(false);
@@ -20,6 +21,7 @@ function App() {
         <Navbar toggleDashboard={toggleDashboard} />
         <Chart></Chart>
         <Analytics></Analytics>
+        <ActivityStatus></ActivityStatus>
       </div>
     </div>
   );
