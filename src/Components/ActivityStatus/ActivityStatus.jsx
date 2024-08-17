@@ -180,31 +180,31 @@ const ActivityStatus = () => {
                     </div>
                 </div>
                 <div className="overflow-x-auto">
-            <table className="w-full text-left rounded-lg overflow-hidden">
-                <thead>
-                    <tr className="text-gray-300 text-sm lg:text-base uppercase">
-                        <th className="py-6 px-4">Invoice</th>
-                        <th className="py-6 px-4">Customers</th>
-                        <th className="py-6 px-4">From</th>
-                        <th className="py-6 px-4">Price</th>
-                        <th className="py-6 px-4 text-center">Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {currentData.map((row, index) => (
-                        <tr key={index} className="text-gray-300">
-                            <td className="py-4 px-4">{row.invoice}</td>
-                            <td className="py-4 lg:px-4 text-gray-500">{row.customer}</td>
-                            <td className="py-4 px-4 text-gray-500">{row.from}</td>
-                            <td className="py-4 px-4 text-gray-500">{row.price}</td>
-                            <td className={`py-4 text-center text-white ${row.statusBg} rounded-lg text-base w-22 h-9 mt-3 flex items-center justify-center`}>
-                                {row.status}
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
+                    <table className="w-full text-left rounded-lg overflow-hidden">
+                        <thead>
+                            <tr className="text-gray-300 text-sm lg:text-base uppercase">
+                                <th className="py-6 px-4">Invoice</th>
+                                <th className="py-6 px-4">Customers</th>
+                                <th className="py-6 px-4">From</th>
+                                <th className="py-6 px-4">Price</th>
+                                <th className="py-6 px-4 text-center">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {currentData.map((row, index) => (
+                                <tr key={index} className="text-gray-300">
+                                    <td className="py-4 px-4">{row.invoice}</td>
+                                    <td className="py-4 lg:px-4 text-gray-500">{row.customer}</td>
+                                    <td className="py-4 px-4 text-gray-500">{row.from}</td>
+                                    <td className="py-4 px-4 text-gray-500">{row.price}</td>
+                                    <td className={`py-4 text-center text-white ${row.statusBg} rounded-lg text-base w-22 h-9 mt-3 flex items-center justify-center`}>
+                                        {row.status}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
                 <div className="lg:flex md:flex justify-between items-center mt-4">
                     <div className="text-gray-500">
                         Showing {firstEntryIndex} to {lastEntryIndex} of {data.length} entries

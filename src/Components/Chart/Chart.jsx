@@ -61,6 +61,8 @@ const Chart = () => {
     };
 
     const lineOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false,
@@ -160,7 +162,7 @@ const Chart = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='w-[260px] lg:w-auto md:w-[300px] mt-0 md:mt-10 lg:mt-0'>
+                            <div className='xxs:w-[250px] xs:w-[310px] sm:w-[365px] md:h-[190px] mdl:h-[80%] lg:w-auto md:w-[300px] mt-0 md:mt-7 lg:mt-0'>
                                 <Line ref={chartRef} data={lineData} options={lineOptions} />
                             </div>
                         </div>
